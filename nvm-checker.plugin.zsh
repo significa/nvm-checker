@@ -4,7 +4,7 @@ function valid_node() {
         # Gets nvmrc version
         local nvmrc_version=$(cat .nvmrc)
         # Gets current node version
-        local current_node_version=$(nvm version)
+        local current_node_version=$(node -v)
 
         # Gets nvmrc version major number
         local version_number=${nvmrc_version#?v} 

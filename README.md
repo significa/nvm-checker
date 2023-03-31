@@ -14,7 +14,7 @@ _This projects aims at providing users a visual aid to notice that their node ve
 
 1.  Clone this repository in oh-my-zsh's plugins directory:
 
-        git clone https://github.com/significa/nvm-checker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/nvm-checker
+        git clone git@github.com:significa/nvm-checker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/nvm-checker
 
 2.  Activate the plugin in `~/.zshrc`:
 
