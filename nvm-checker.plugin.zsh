@@ -5,15 +5,14 @@ function valid_node() {
         local nvmrc_version=$(cat .nvmrc)
         # Gets current node version
         local current_node_version=$(node -v)
-
         # Gets nvmrc version major number
-        local version_number=${nvmrc_version#?v} 
-
-        local node_version=${current_node_version:1}
+        local nvmrc_major_version=$(echo $nvmrc_version | tr -d "v")
+        nvmrc_major_version=${nvmrc_major_version%%.*}
         # Gets current node version major number
-        node_version=${node_version%%.*}
+        local node_major_version=$(echo $current_node_version | tr -d "v")
+        node_major_version=${node_major_version%%.*}
 
-        if [[ ${nvmrc_version:0:2} != ${current_node_version:1:2} ]]; then
+        if [[ ${nvmrc_major_version} != ${node_major_version} ]]; then
             echo "%{$bg[red]%}%{$fg[230]%} ⚠️  NODE VERSION %{$reset_color%}"
         fi
     fi
