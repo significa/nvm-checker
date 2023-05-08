@@ -23,3 +23,9 @@ _This projects aims at providing users a visual aid to notice that their node ve
 3.  Source `~/.zshrc` to take changes into account:
 
         source ~/.zshrc
+
+## Update
+
+1. Remove plugin directory and clone the repository again:
+
+        rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/nvm-checker; git clone git@github.com:significa/nvm-checker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/nvm-checker
