@@ -19,4 +19,4 @@ function valid_node() {
 }
 
 # Add node version validator to the right side of the prompt
-RPROMPT="$(valid_node)"
+RPROMPT='$(valid_node)'
